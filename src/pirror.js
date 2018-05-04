@@ -1,13 +1,13 @@
-export function createRequest(request) {
+export const createRequest = (request) => {
   return JSON.stringify(request)
 }
 
-export function handleRequest(request, data) {
+export const handleRequest = (request, data) => {
   const parsed = JSON.parse(request)
   Object.assign(data, JSON.parse(request))
 }
 
-export function Pirror() {
+export const Pirror = () => {
   return {
     peers: [],
     broadcast: () => {},
